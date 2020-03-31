@@ -7,7 +7,7 @@
             <p appHighlight >The winning quote is : {{winner.userquote}}<br> and the author is {{winner.author}}<br>Congratulations</p>
             </div>
         <li *ngFor='let quote of quotes'>
-            <p>Name :{{quote.Username}}<br>Author : {{quote.author}}<br> Quote :{{quote.userquote}}</p>
+            <p>Name :{{quote.Username}}<br>Author : {{quote.author}}<br> Quote :{{quote.userquote}}<br>It was submitted on {{quote.submit|date}}</p>
             <button class="btn btn-warning" (click)=delete()>Delete Quote</button><br><br>
                 <button class="btn btn-success"  (click)="upvote(quote)" (click)="bestquote()">Upvote</button><br> <p>Votes:{{quote.Upvote}}</p>
                 <button class="btn btn-danger"(click)="downvote(quote)" >Downvote</button><p>Votes: {{quote.Downvote}}</p>

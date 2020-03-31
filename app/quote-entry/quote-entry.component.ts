@@ -7,7 +7,7 @@ import { Quote} from '../quote'
   styleUrls: ['./quote-entry.component.css']
 })
 export class QuoteEntryComponent implements OnInit {
-  newquote = new Quote("","",0,0,"")
+  newquote = new Quote("","",0,0,"",new Date())
   @Output() addquote = new EventEmitter<Quote>();
 
   submit(){

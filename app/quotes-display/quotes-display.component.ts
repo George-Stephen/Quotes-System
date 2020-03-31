@@ -8,7 +8,7 @@ import {Quote} from '../quote'
 })
 export class QuotesDisplayComponent implements OnInit {
   quotes: Quote[] =[
-    new Quote("George Stephen","Life is all about Choice, its either you make it or leave it",0,0,"Elon Musk")
+    new Quote("George Stephen","Life is all about Choice, its either you make it or leave it",0,0,"Elon Musk",new Date(2015,8,7))
   ]
   delete(){
     this.quotes.splice(0,1)
@@ -20,7 +20,7 @@ export class QuotesDisplayComponent implements OnInit {
   quote.Downvote =  quote.Downvote + 1
 }
  addquote(quote){
-   quote= new Quote(quote.Username,quote.userquote,0,0,quote.author)
+   quote= new Quote(quote.Username,quote.userquote,0,0,quote.author,quote.submit)
   this.quotes.push(quote)
 }
 winners:Quote[]=[];
