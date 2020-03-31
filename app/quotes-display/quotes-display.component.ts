@@ -8,7 +8,7 @@ import {Quote} from '../quote'
 })
 export class QuotesDisplayComponent implements OnInit {
   quotes: Quote[] =[
-    new Quote("George Stephen","Life is all about Choice, its either you make it or leave it",0,0,"Elon Musk",)
+    new Quote("George Stephen","Life is all about Choice, its either you make it or leave it",0,0,"Elon Musk")
   ]
   delete(){
     this.quotes.splice(0,1)
