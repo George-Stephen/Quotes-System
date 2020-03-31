@@ -1,6 +1,7 @@
 
 <form #goalForm='ngForm' (ngSubmit)='submit()'>
-<label>Name</label><input type="text" class="entry" [(ngModel)]="newquote.Username" name="name"><br>
-<label>Quote</label><input type="text" class="entry" [(ngModel)]="newquote.userquote" name="quote"><br><br>
+<label>Name : </label><br><br><input type="text" class="entry" [(ngModel)]="newquote.Username" name="name"><br>
+<label>Author : </label><br><br><input type="text" class="entry" [(ngModel)]="newquote.author" name="author"><br>
+<label>Quote : </label><br><br><input type="text" class="entry" [(ngModel)]="newquote.userquote" name="quote"><br><br>
 <button type="submit" class="btn btn-success">Submit</button>
 </form>
