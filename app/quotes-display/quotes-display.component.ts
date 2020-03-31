@@ -17,6 +17,7 @@ export class QuotesDisplayComponent implements OnInit {
   quote.Downvote =  quote.Downvote + 1
 }
  addquote(quote){
+   quote= new Quote(quote.Username,quote.userquote,0,0)
   this.quotes.push(quote)
 }
   constructor() { }
