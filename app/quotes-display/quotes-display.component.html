@@ -1,0 +1,12 @@
+<app-quote-entry (addquote)="addquote($event)"></app-quote-entry>
+<br><br>
+<div class="output">
+    <h2>All quotes entered</h2>
+    <ul>
+        <li *ngFor='let quote of quotes'>
+            <p>Name :{{quote.Username}}<br> Quote :{{quote.userquote}}</p>
+                <button class="btn btn-success"  (click)="upvote(quote)">Upvote</button><br> <p>Votes:{{quote.Upvote}}</p>
+                <button class="btn btn-danger"(click)="downvote(quote)" >Downvote</button><p>Votes: {{quote.Downvote}}</p>
+        </li>
+      </ul>
+</div>
