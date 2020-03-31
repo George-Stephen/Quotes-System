@@ -1,4 +1,6 @@
+
 import { Directive,ElementRef } from '@angular/core';
+import {Quote} from '../app/quote'
 
 @Directive({
   selector: '[appHighlight]'
@@ -6,6 +8,6 @@ import { Directive,ElementRef } from '@angular/core';
 export class HighlightDirective {
   constructor(private elem:ElementRef){
     this.elem.nativeElement.style.textDecoration='underline'
-    this.elem.nativeElement.style.fontSize ='50px'
+    this.elem.nativeElement.style.fontSize ='20px'  
   }
 }

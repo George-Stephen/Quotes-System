@@ -23,6 +23,22 @@ export class QuotesDisplayComponent implements OnInit {
    quote= new Quote(quote.Username,quote.userquote,0,0,quote.author)
   this.quotes.push(quote)
 }
+winners:Quote[]=[];
+  bestquote(){
+    this.winners.splice(0,this.winners.length);
+    var largest= this.quotes[0].Upvote;
+    var number = null;
+    for(var i =0;i<this.quotes.length;i++){
+      number=this.quotes[i].Upvote;
+      largest = Math.max(largest,number)
+    }
+    for(var i =0;i<this.quotes.length;i++){
+      if (this.quotes[i].Upvote === largest){
+        this.winners.push(this.quotes[i])
+      }
+
+    }
+  }
 
   constructor() { }
 
