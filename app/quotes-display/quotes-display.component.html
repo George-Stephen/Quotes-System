@@ -1,5 +1,9 @@
 <app-quote-entry (addquote)="addquote($event)"></app-quote-entry>
 <br><br>
+<article>
+    Hello,{{quote.Username}} please enter your quote and click the button submit ,M<br> your quote will be submitted to the lot and you can vote for your<br> favourite quote by your favourite author
+</article>
+<hr>
 <div class="output">
     <h2>All quotes entered</h2>
     <ul>
@@ -13,4 +17,5 @@
                 <button class="btn btn-danger"(click)="downvote(quote)" >Downvote</button><p>Votes: {{quote.Downvote}}</p>
         </li>
       </ul>
+     
 </div>
